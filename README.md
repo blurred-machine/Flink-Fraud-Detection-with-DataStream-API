@@ -33,14 +33,14 @@ this will generate the .jar file, now use the jar file to run on the flink clust
 ./bin/flink run ./frauddetection-0.1.jar
 ```
 3) Additionally, you can check Flink’s Web UI to monitor the status of the Cluster and running Job.
-Firstly, let's config the rest ports for the web UI
+<br>Firstly, let's config the rest ports for the web UI
 ```yml
 rest.port: 8081
 rest.address: 0.0.0.0
 
 ```
 Now we can access the UI at localhost port 8081 using the link [Flink Local UI](http://localhost:8081)
-
+![UI](https://github.com/blurred-machine/Flink-Fraud-Detection-with-DataStream-API/blob/main/images/ui.png)
 4) To stop the cluster:
 ```mvn
 ./bin/stop-cluster.sh
