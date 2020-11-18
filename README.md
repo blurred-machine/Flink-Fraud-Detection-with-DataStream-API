@@ -22,17 +22,23 @@ mvn archetype:generate \
 ```mvn
 mvn clean package
 ```
-this will generate the .jar file, now use the jar file to run on the flink cluster.
-1) start cluster
+this will generate the .jar file, now use the jar file to run on the flink cluster. Take the jar file inside your flink repo and run the following commands.
+
+1) start cluster:
 ```mvn
 ./bin/start-cluster.sh
 ```
-2) run the jar
+2) run the jar on flink:
 ```mvn
-run ./Detector.jar
+./bin/flink run ./frauddetection-0.1.jar
 ```
 3) Additionally, you can check Flink’s Web UI to monitor the status of the Cluster and running Job.
 [Flink Local UI](http://localhost:8080)
+
+4) To stop the cluster:
+```mvn
+./bin/stop-cluster.sh
+```
 
 
 
