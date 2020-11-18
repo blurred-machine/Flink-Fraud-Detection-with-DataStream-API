@@ -1,7 +1,7 @@
 # Flink-Fraud-Detection-with-DataStream-API
-Credit card fraud is a growing concern in the digital age. Criminals steal credit card numbers by running scams or hacking into insecure systems. Stolen numbers are tested by making one or more small purchases, often for a dollar or less. If that works, they then make more significant purchases to get items they can sell or keep for themselves.
+This repo consists of a fraud detection system for alerting on suspicious credit card transactions. Using a simple set of rules, you will see how Flink allows us to implement advanced business logic and act in real-time.
 
-In this tutorial, you will build a fraud detection system for alerting on suspicious credit card transactions. Using a simple set of rules, you will see how Flink allows us to implement advanced business logic and act in real-time.
+To be able to run Flink, the only requirement is to have a working **Java 8 or 11** installation. 
 
 
 ## Run this project
@@ -33,7 +33,13 @@ this will generate the .jar file, now use the jar file to run on the flink clust
 ./bin/flink run ./frauddetection-0.1.jar
 ```
 3) Additionally, you can check Flink’s Web UI to monitor the status of the Cluster and running Job.
-[Flink Local UI](http://localhost:8080)
+Firstly, let's config the rest ports for the web UI
+```yml
+rest.port: 8081
+rest.address: 0.0.0.0
+
+```
+Now we can access the UI at localhost port 8081 using the link [Flink Local UI](http://localhost:8081)
 
 4) To stop the cluster:
 ```mvn
